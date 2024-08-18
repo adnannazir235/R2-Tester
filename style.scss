@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.row {
+    --bs-gutter-x: 0;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #d8e0eb;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9fa9b4;
+}
+
+body {
+    aside.col-3 * {
+        font-size: small;
+    }
+
+    aside.col-3 {
+        height: 100vh;
+        overflow-y: auto;
+        background-color: whitesmoke;
+        border-right: 1px solid;
+
+        div#requests {
+            details {
+                summary {
+                    outline: none;
+                    border: 1px solid #917fffde;
+                    position: relative;
+
+                    div.dropdown {
+                        position: absolute;
+                        top: 10%;
+                        right: 5px;
+
+                        button.btn.btn-sm.btn-secondary.dropdown-toggle {
+                            display: none;
+                        }
+
+                        button.btn.btn-sm.btn-secondary.dropdown-toggle::after {
+                            display: none;
+                        }
+
+                        button.btn.btn-sm.btn-secondary.dropdown-toggle.show {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                summary:hover {
+                    div.dropdown {
+                        button.btn.btn-sm.btn-secondary.dropdown-toggle {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                >div {
+                    button.btn.btn-sm {
+                        text-align: justify;
+                        border-radius: 0;
+                    }
+
+                    button.btn.btn-sm:not(.btn-danger) {
+                        width: 100%;
+                        padding-left: 2rem;
+                    }
+
+                    button.btn.btn-sm.btn-danger {
+                        display: none;
+                        border-left: 1px solid white;
+                    }
+                }
+
+                >div:not(:last-of-type) {
+                    border-bottom: 1px solid white;
+                }
+
+                >div:hover {
+                    button.btn.btn-sm.btn-danger {
+                        display: inline-block;
+                    }
+                }
+
+                details {
+                    summary {
+                        padding-left: 1.3rem !important;
+                    }
+
+                    >div {
+                        button.btn.btn-sm:not(.btn-danger) {
+                            padding-left: 2.5rem;
+                        }
+                    }
+
+                    >div:not(:last-of-type) {
+                        border-bottom: 1px solid white;
+                    }
+                }
+            }
+
+            >details:not(:last-of-type) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

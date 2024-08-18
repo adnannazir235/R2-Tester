@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.row {
+  --bs-gutter-x: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #d8e0eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9fa9b4;
+}
+
+body aside.col-3 * {
+  font-size: small;
+}
+body aside.col-3 {
+  height: 100vh;
+  overflow-y: auto;
+  background-color: whitesmoke;
+  border-right: 1px solid;
+}
+body aside.col-3 div#requests details summary {
+  outline: none;
+  border: 1px solid rgba(145, 127, 255, 0.8705882353);
+  position: relative;
+}
+body aside.col-3 div#requests details summary div.dropdown {
+  position: absolute;
+  top: 10%;
+  right: 5px;
+}
+body aside.col-3 div#requests details summary div.dropdown button.btn.btn-sm.btn-secondary.dropdown-toggle {
+  display: none;
+}
+body aside.col-3 div#requests details summary div.dropdown button.btn.btn-sm.btn-secondary.dropdown-toggle::after {
+  display: none;
+}
+body aside.col-3 div#requests details summary div.dropdown button.btn.btn-sm.btn-secondary.dropdown-toggle.show {
+  display: inline-block;
+}
+body aside.col-3 div#requests details summary:hover div.dropdown button.btn.btn-sm.btn-secondary.dropdown-toggle {
+  display: inline-block;
+}
+body aside.col-3 div#requests details > div button.btn.btn-sm {
+  text-align: justify;
+  border-radius: 0;
+}
+body aside.col-3 div#requests details > div button.btn.btn-sm:not(.btn-danger) {
+  width: 100%;
+  padding-left: 2rem;
+}
+body aside.col-3 div#requests details > div button.btn.btn-sm.btn-danger {
+  display: none;
+  border-left: 1px solid white;
+}
+body aside.col-3 div#requests details > div:not(:last-of-type) {
+  border-bottom: 1px solid white;
+}
+body aside.col-3 div#requests details > div:hover button.btn.btn-sm.btn-danger {
+  display: inline-block;
+}
+body aside.col-3 div#requests details details summary {
+  padding-left: 1.3rem !important;
+}
+body aside.col-3 div#requests details details > div button.btn.btn-sm:not(.btn-danger) {
+  padding-left: 2.5rem;
+}
+body aside.col-3 div#requests details details > div:not(:last-of-type) {
+  border-bottom: 1px solid white;
+}
+body aside.col-3 div#requests > details:not(:last-of-type) {
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=style.css.map */
