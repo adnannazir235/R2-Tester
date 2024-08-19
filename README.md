@@ -7,7 +7,7 @@ This project is a learning tool designed to replicate Postman-like UI and featur
 
 Technologies Used:
 
-> HTML, CSS/SASS, Bootstrap, JavaScript, Prettify
+> HTML, CSS/SASS, JavaScript, Bootstrap, Prettify
 
 You can view a live demonstration of the project in your browser at the following URL:
 
