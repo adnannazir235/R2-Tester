@@ -314,25 +314,14 @@ function loadRequestPreview(collectionObj, folderObj = null, requestObj) {
         methodSelect.appendChild(option);
     };
 
+    methodSelect.addEventListener("input", (event) => { updateRequestValue() });
+
     const routeInput = document.createElement("input");
     routeInput.type = "text";
     routeInput.className = "form-control";
     routeInput.value = requestObj.object.url || "";
 
-    routeInput.addEventListener("input", (event) => {
-
-        saveButton.disabled = false;
-
-        saveButton.addEventListener("click", () => {
-
-            const newUrl = event.target.value;
-
-            let collections = getFromLocalStorage(settings.collectionskey);
-            requestObj.object.url = newUrl;
-            saveRequest(collections, collectionObj.name, folderObj === null ? folderObj : folderObj.name, requestObj);
-            saveButton.disabled = true;
-        });
-    });
+    routeInput.addEventListener("input", (event) => { updateRequestValue() });
 
     const actionButton = createButton("btn btn-outline-primary", "Send", function () { sendRequest(requestObj) });
 
@@ -342,6 +331,25 @@ function loadRequestPreview(collectionObj, folderObj = null, requestObj) {
 
     requestPreviewDiv.appendChild(breadcrumb);
     requestPreviewDiv.appendChild(route);
+
+    function updateRequestValue() {
+
+        saveButton.disabled = false;
+
+        saveButton.addEventListener("click", () => {
+
+            let collections = getFromLocalStorage(settings.collectionskey);
+            const newMethod = methodSelect.value;
+            const newUrl = routeInput.value;
+
+            requestObj.object.url = newUrl;
+            requestObj.object.method = newMethod;
+
+            saveRequest(collections, collectionObj.name, folderObj === null ? folderObj : folderObj.name, requestObj);
+            loadRequests();
+            saveButton.disabled = true;
+        });
+    };
 };
 
 function deleteCollection(collectionName, collections) {
