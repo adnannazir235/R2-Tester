@@ -5,7 +5,8 @@ This project is a learning tool designed to replicate Postman-like UI and featur
 > Add, edit, and delete API requests
 > Send requests and visualize responses with Prettify (JSON)
 
-Read more about it here: https://dev.to/adnannazir235/building-r2-tester-a-postman-like-side-project-4gpl.
+You can read more about this project on this post here:
+> https://dev.to/adnannazir235/building-r2-tester-a-postman-like-side-project-4gpl
 
 Technologies Used:
 
