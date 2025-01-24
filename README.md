@@ -10,7 +10,7 @@ You can read more about this project on this post here:
 
 Technologies Used:
 
-> HTML, CSS/SASS, JavaScript, Bootstrap, Prettify
+> HTML, CSS/SASS, Bootstrap, JavaScript, Prettify
 
 You can view a live demonstration of the project in your browser at the following URL:
 
